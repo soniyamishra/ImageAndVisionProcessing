@@ -1,0 +1,10 @@
+rgbImage = imread('flower.jpg');
+a = zeros(size(rgbImage, 1), size(rgbImage, 2));
+red = rgbImage(:,:,1);
+green = rgbImage(:,:,2);
+blue = rgbImage(:,:,3);
+figure 1;
+subplot(2,2,1); imshow(rgbImage);title('Original Image');
+subplot(2,2,2);imshow(cat(3, red, a, a));title('Red channel');
+subplot(2,2,3);imshow(cat(3, a,green, a));title('Green channel');
+subplot(2,2,4);imshow(cat(3, a, a,blue));title('Blue Channel');
